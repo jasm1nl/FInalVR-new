@@ -22,7 +22,7 @@ public class Recipe : MonoBehaviour
         }
         
         
-        if(collect && other.gameObject.CompareTag("Pot")){
+        if(collect && other.gameObject.CompareTag("pot")){
             recipeUI.SetActive(true);
         }
     }
