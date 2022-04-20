@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Pot : MonoBehaviour
 {
     string currentRecipeString = "";
-    string recipe = "Mushroom" + "Eyeball" + "Boot";
+    string recipe = "mushroom" + "eyeball" + "boot";
 
     // ^you can change the recipe here
     bool cooked = false;
@@ -29,7 +29,7 @@ public class Pot : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Grabbable"))
         {
-            currentRecipeString += other.gameObject.name;
+            currentRecipeString += other.gameObject.tag;
             liquid.SetActive(true);
             addingSound.Play();
             itemsAdded++;
