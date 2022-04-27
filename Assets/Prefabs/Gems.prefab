@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1396760179016806952}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VRayCam001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 3222897026175012620}
   - component: {fileID: 9085503675473593946}
   - component: {fileID: 7533606953771862580}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1867388725078530156}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gems
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2129677265101669892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VRayLight001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 9003342595497745027}
   - component: {fileID: 3404001018525942430}
   - component: {fileID: 7693699023540636829}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7464449664199738089}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VRayLight002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1320508831373339120}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VRayCam001.Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 2903298619854720951}
   - component: {fileID: 2537218445129551746}
   - component: {fileID: 759007899309415940}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -522,7 +522,7 @@ GameObject:
   - component: {fileID: 4980570727758404098}
   - component: {fileID: 4483497514559161340}
   - component: {fileID: 5845133990920318425}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -633,7 +633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2582239031733666596}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VRayPlane002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
