@@ -10,6 +10,10 @@ TagManager:
   - eyeball
   - boot
   - pot
+  - rbase
+  - sbase
+  - ebase
+  - abase
   layers:
   - Default
   - TransparentFX
