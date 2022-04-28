@@ -1,7 +1,5 @@
 //Run this on the first scene loaded. You only need to run this once.
 
-
-/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,4 +33,3 @@ public class VRInit : MonoBehaviour
         }
     }
 }
-*/
