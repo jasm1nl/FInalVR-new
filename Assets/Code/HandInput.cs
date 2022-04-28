@@ -7,6 +7,7 @@ public class HandInput : MonoBehaviour
 {
     public TextMesh outText;
     public XRNode handRole = XRNode.LeftHand;
+    
 
     void Update()
     {
