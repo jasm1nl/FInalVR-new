@@ -19,6 +19,7 @@ TagManager:
   - shampoo
   - hammer
   - berries
+  - Light
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - UI
   - Grabbable
   - IgnorePlayer
-  - 
+  - Lighting
   - 
   - 
   - 

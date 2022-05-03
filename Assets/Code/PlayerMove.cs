@@ -7,7 +7,7 @@ using UnityEngine.XR;
 public class PlayerMove : MonoBehaviour
 {
     int speed = 5;
-    public XRNode handRole = XRNode.LeftHand;
+    public XRNode handRole = XRNode.RightHand;
     Rigidbody _rigidbody;
     Transform camTrans;
     void Start()
