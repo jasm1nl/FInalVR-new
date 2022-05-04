@@ -15,7 +15,7 @@ public class Grab : MonoBehaviour
     private Transform heldObject = null;
     private Rigidbody heldRigidbody = null;
 
-    public XRNode handRole = XRNode.LeftHand;
+    public XRNode handRole = XRNode.RightHand;
     bool triggerState = false;
 
     void Update()

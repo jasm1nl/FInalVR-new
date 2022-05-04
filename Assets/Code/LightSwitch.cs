@@ -8,7 +8,7 @@ public class LightSwitch : MonoBehaviour
     public XRNode handRole = XRNode.RightHand;
     public LayerMask lightingLayer;
     private float raycastDist = 30;
-    private GameObject GameObjectHit = null;
+    private Light PLight;
 
     private Transform hoverObject = null;
 
@@ -30,14 +30,37 @@ public class LightSwitch : MonoBehaviour
               //Set light inactive 
               //What should I do here to deactivate the gameObject that the raycast hit on?
 
-                if(hit.transform.gameObject.activeInHierarchy)
-                    {
-                        hit.transform.gameObject.SetActive(false);
-                    }
-                else
-                    {
-                        hit.transform.gameObject.SetActive(true);
-                    }
+                PLight = hit.transform.gameObject.GetComponent<Light>();
+
+                if(PLight.intensity==8)
+                {
+                    PLight.intensity=0;
+                }
+                else if (PLight.intensity==0)
+                {
+                    PLight.intensity=8;
+                }
+
+                // if(hit.transform.gameObject.activeInHierarchy)
+                //     {
+                //         hit.transform.gameObject.SetActive(false);
+                //     }
+                // else
+                //     {
+                //         hit.transform.gameObject.SetActive(true);
+                //     }
+                
+            //draft
+                // PLight = hit.transform.Find("Point Light").gameObject;
+                // if (PLight.activeInHierarchy)
+                // {
+                //     PLight.SetActive(false);
+                // }
+                // else
+                // {
+                //     PLight.SetActive(true);
+                // }
+
                 
             }
             
@@ -53,23 +76,23 @@ public class LightSwitch : MonoBehaviour
         {
             if (hoverObject != hit.transform)
             {
-                if (hoverObject != null)
-                {
-                    hoverObject.GetComponent<Renderer>().material.color = Color.white;
-                }
+                // if (hoverObject != null)
+                // {
+                //     hoverObject.GetComponent<Renderer>().material.color = Color.white;
+                // }
                 hoverObject = hit.transform;
                 hoverObject.GetComponent<Renderer>().material.color = Color.green;
             }
         } 
        
-        else
-        {
-            if (hoverObject != null)
-            {
-                hoverObject.GetComponent<Renderer>().material.color = Color.white;
-                hoverObject = null;
-            }
-        }
+        // else
+        // {
+        //     if (hoverObject != null)
+        //     {
+        //         hoverObject.GetComponent<Renderer>().material.color = Color.white;
+        //         hoverObject = null;
+        //     }
+        // }
     }
 
     
