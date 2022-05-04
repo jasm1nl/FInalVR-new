@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timer;
 
-    public float secondsLeft = 30;
+    public static float secondsLeft = 300;
     // public bool takingAway = false;
 
     void Update()
@@ -31,6 +31,7 @@ public class Timer : MonoBehaviour
         if (timeToDisplay < 0)
         {
             timeToDisplay = 0;
+            SceneManager.LoadScene("Fail");
         }
 
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);

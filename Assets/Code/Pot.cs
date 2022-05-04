@@ -13,7 +13,9 @@ public class Pot : MonoBehaviour
 
     public GameObject potion;
     public GameObject liquid;
+    public GameObject wrong;
     AudioSource addingSound;
+    public AudioSource explosion;
 
     bool item1 = false;
     bool item2 = false;
@@ -23,11 +25,12 @@ public class Pot : MonoBehaviour
     bool item6 = false;
     bool item7 = false;
 
-    // public GameObject text;
+    Animation explode;
 
     void Start()
     {
         addingSound = GetComponent<AudioSource>();
+        explode = GetComponent<Animation>();
     }
 
 
@@ -37,63 +40,88 @@ public class Pot : MonoBehaviour
         {
             item1 = true;
             liquid.SetActive(true);
+            wrong.SetActive(false);
             addingSound.Play();
-            // Destroy(other.gameObject);
+            Destroy(other.gameObject);
+            Timer.secondsLeft += 10;
         }
-        if (other.gameObject.CompareTag("eyeball") && !item2 && item1 == true)
+        else if (other.gameObject.CompareTag("eyeball") && !item2 && item1 == true)
         {
+            wrong.SetActive(false);
             item2 = true;
             addingSound.Play();
+            Destroy(other.gameObject);
+            Timer.secondsLeft += 10;
         }
-        if (other.gameObject.CompareTag("boot") && !item3 && item2 == true)
+        else if (other.gameObject.CompareTag("boot") && !item3 && item2 == true)
         {
+            wrong.SetActive(false);
             item3 = true;
             addingSound.Play();
+            Destroy(other.gameObject);
+            Timer.secondsLeft += 10;
         }
-        if (other.gameObject.CompareTag("watermelon") && !item4 && item3 == true)
+        else if (other.gameObject.CompareTag("watermelon") && !item4 && item3 == true)
         {
+            wrong.SetActive(false);
             item4 = true;
             addingSound.Play();
+            Destroy(other.gameObject);
+            Timer.secondsLeft += 10;
         }
-        if (other.gameObject.CompareTag("shampoo") && !item5 && item4 == true)
+        else if (other.gameObject.CompareTag("shampoo") && !item5 && item4 == true)
         {
+            wrong.SetActive(false);
             item5 = true;
             addingSound.Play();
+            Destroy(other.gameObject);
+            Timer.secondsLeft += 10;
         }
-        if (other.gameObject.CompareTag("hammer") && !item6 && item5 == true)
+        else if (other.gameObject.CompareTag("hammer") && !item6 && item5 == true)
         {
+            wrong.SetActive(false);
             item6 = true;
             addingSound.Play();
+            Destroy(other.gameObject);
+            Timer.secondsLeft += 10;
         }
-        if (other.gameObject.CompareTag("dskull") && !item7 && item6 == true)
+        else if (other.gameObject.CompareTag("dskull") && !item7 && item6 == true)
         {
+            wrong.SetActive(false);
             item7 = true;
             addingSound.Play();
+            Destroy(other.gameObject);
+            Timer.secondsLeft += 10;
         }
-        if (other.gameObject.CompareTag("berries") && item7 == true)
+        else if (other.gameObject.CompareTag("berries") && item7 == true)
         {
+            wrong.SetActive(false);
             cooked = true;
             addingSound.Play();
+            Destroy(other.gameObject);
+            Timer.secondsLeft += 10;
         }
-        if (cooked == true)
+        else if (cooked == true)
         {
+            wrong.SetActive(false);
             potion.SetActive(true);
             liquid.SetActive(false);
+        }
+        else
+        {
+            explode.Play();
+            wrong.SetActive(true);
+            explosion.Play();
         }
     }
 
     private void Update()
     {
-        // if (cooked == true || itemsAdded == 3)
-        // {
-        //     StartCoroutine(WaitTime());
-        //     Destroy(gameObject);
-        // }
+
     }
 
     IEnumerator WaitTime()
     {
-        yield return new WaitForSeconds(2f);
-        // text.SetActive(true);
+        yield return new WaitForSeconds(1f);
     }
 }
