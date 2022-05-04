@@ -16,8 +16,8 @@ public class GlobalLightCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(light1.activeInHeriarchy && !light2.activeInHeriarchy && !light3.activeInHeriarchy && 
-        light4.activeInHeriarchy && light5.activeInHeriarchy && !light6.activeInHeriarchy && !light7.activeInHeriarchy)
+        if(light1.activeInHierarchy && !light2.activeInHierarchy && !light3.activeInHierarchy && 
+        light4.activeInHierarchy && light5.activeInHierarchy && !light6.activeInHierarchy && !light7.activeInHierarchy)
         {
             //remove the door from small room 
             Destroy(Smalldoor);

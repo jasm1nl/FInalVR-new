@@ -30,7 +30,7 @@ public class LightSwitch : MonoBehaviour
               //Set light inactive 
               //What should I do here to deactivate the gameObject that the raycast hit on?
 
-                if(hit.transform.gameObject.activeInHeriarchy)
+                if(hit.transform.gameObject.activeInHierarchy)
                     {
                         hit.transform.gameObject.SetActive(false);
                     }
