@@ -6,19 +6,14 @@ public class Amethyst : MonoBehaviour
 {
     public GameObject amethyst;
     public GameObject skull;
-    AudioSource asound;
-
-    void Start()
-    {
-        asound = GetComponent<AudioSource>();
-    }
+    public GameObject sound;
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("abase"))
         {
             PublicVarsGem.gemNum++;
             Destroy(gameObject); 
             amethyst.SetActive(true);
-            asound.Play();
+            sound.SetActive(true);
         }
 
         if (PublicVarsGem.gemNum > 3)

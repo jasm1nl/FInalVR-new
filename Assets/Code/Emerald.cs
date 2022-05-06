@@ -6,19 +6,14 @@ public class Emerald : MonoBehaviour
 {
     public GameObject emerald;
     public GameObject skull;
-    AudioSource esound;
-
-    void Start()
-    {
-        esound = GetComponent<AudioSource>();
-    }
+    public GameObject sound;
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("ebase"))
         {
             PublicVarsGem.gemNum++;
             Destroy(gameObject); 
             emerald.SetActive(true);
-            esound.Play();
+            sound.SetActive(true);
         }
 
         if (PublicVarsGem.gemNum > 3)

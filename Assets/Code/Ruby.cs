@@ -6,19 +6,14 @@ public class Ruby : MonoBehaviour
 {
     public GameObject ruby;
     public GameObject skull;
-    AudioSource rsound;
-
-    void Start()
-    {
-        rsound = GetComponent<AudioSource>();
-    }
+    public GameObject sound;
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.CompareTag("rbase"))
         {
             PublicVarsGem.gemNum++;
             Destroy(gameObject); 
             ruby.SetActive(true);
-            rsound.Play();
+            sound.SetActive(true);
         }
 
         if (PublicVarsGem.gemNum > 3)
