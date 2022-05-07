@@ -23,5 +23,7 @@ public class PlayerMove : MonoBehaviour
         moveDir = moveDir.normalized * speed;
         moveDir.y = _rigidbody.velocity.y;
         _rigidbody.velocity = moveDir;
+
+       
     }
 }
