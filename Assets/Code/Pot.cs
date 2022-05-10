@@ -36,82 +36,93 @@ public class Pot : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("mushroom") && !item1)
+        if (other.gameObject.layer == LayerMask.NameToLayer("Grabbable"))
         {
-            item1 = true;
-            liquid.SetActive(true);
-            wrong.SetActive(false);
-            addingSound.Play();
-            Destroy(other.gameObject);
-            Timer.secondsLeft += 10;
-        }
-        else if (other.gameObject.CompareTag("eyeball") && !item2 && item1 == true)
-        {
-            wrong.SetActive(false);
-            item2 = true;
-            addingSound.Play();
-            Destroy(other.gameObject);
-            Timer.secondsLeft += 10;
-        }
-        else if (other.gameObject.CompareTag("boot") && !item3 && item2 == true)
-        {
-            wrong.SetActive(false);
-            item3 = true;
-            addingSound.Play();
-            Destroy(other.gameObject);
-            Timer.secondsLeft += 10;
-        }
-        else if (other.gameObject.CompareTag("watermelon") && !item4 && item3 == true)
-        {
-            wrong.SetActive(false);
-            item4 = true;
-            addingSound.Play();
-            Destroy(other.gameObject);
-            Timer.secondsLeft += 10;
-        }
-        else if (other.gameObject.CompareTag("shampoo") && !item5 && item4 == true)
-        {
-            wrong.SetActive(false);
-            item5 = true;
-            addingSound.Play();
-            Destroy(other.gameObject);
-            Timer.secondsLeft += 10;
-        }
-        else if (other.gameObject.CompareTag("hammer") && !item6 && item5 == true)
-        {
-            wrong.SetActive(false);
-            item6 = true;
-            addingSound.Play();
-            Destroy(other.gameObject);
-            Timer.secondsLeft += 10;
-        }
-        else if (other.gameObject.CompareTag("dskull") && !item7 && item6 == true)
-        {
-            wrong.SetActive(false);
-            item7 = true;
-            addingSound.Play();
-            Destroy(other.gameObject);
-            Timer.secondsLeft += 10;
-        }
-        else if (other.gameObject.CompareTag("berries") && item7 == true)
-        {
-            wrong.SetActive(false);
-            cooked = true;
-            addingSound.Play();
-            Destroy(other.gameObject);
-            Timer.secondsLeft += 10;
-        }
-        else if (cooked == true)
-        {
-            wrong.SetActive(false);
-            potion.SetActive(true);
-            liquid.SetActive(false);
-        }
-        else
-        {
-            explode.Play();
-            wrong.SetActive(true);
-            explosion.Play();
+            if (other.gameObject.CompareTag("mushroom") && !item1)
+            {
+                item1 = true;
+                liquid.SetActive(true);
+                wrong.SetActive(false);
+                addingSound.Play();
+                Destroy(other.gameObject);
+                //Timer.secondsLeft += 10;
+            }
+            else if (other.gameObject.CompareTag("eyeball") && !item2 && item1 == true)
+            {
+                liquid.SetActive(true);
+                wrong.SetActive(false);
+                item2 = true;
+                addingSound.Play();
+                Destroy(other.gameObject);
+                //Timer.secondsLeft += 10;
+            }
+            else if (other.gameObject.CompareTag("boot") && !item3 && item2 == true)
+            {
+                liquid.SetActive(true);
+                wrong.SetActive(false);
+                item3 = true;
+                addingSound.Play();
+                Destroy(other.gameObject);
+                //Timer.secondsLeft += 10;
+            }
+            else if (other.gameObject.CompareTag("watermelon") && !item4 && item3 == true)
+            {
+                liquid.SetActive(true);
+                wrong.SetActive(false);
+                item4 = true;
+                addingSound.Play();
+                Destroy(other.gameObject);
+                //Timer.secondsLeft += 10;
+            }
+            else if (other.gameObject.CompareTag("shampoo") && !item5 && item4 == true)
+            {
+                liquid.SetActive(true);
+                wrong.SetActive(false);
+                item5 = true;
+                addingSound.Play();
+                Destroy(other.gameObject);
+                //Timer.secondsLeft += 10;
+            }
+            else if (other.gameObject.CompareTag("hammer") && !item6 && item5 == true)
+            {
+                liquid.SetActive(true);
+                wrong.SetActive(false);
+                item6 = true;
+                addingSound.Play();
+                Destroy(other.gameObject);
+                //Timer.secondsLeft += 10;
+            }
+            else if (other.gameObject.CompareTag("dskull") && !item7 && item6 == true)
+            {
+                liquid.SetActive(true);
+                wrong.SetActive(false);
+                item7 = true;
+                addingSound.Play();
+                Destroy(other.gameObject);
+                //Timer.secondsLeft += 10;
+            }
+            else if (other.gameObject.CompareTag("berries") && item7 == true)
+            {
+                liquid.SetActive(true);
+                wrong.SetActive(false);
+                cooked = true;
+                addingSound.Play();
+                Destroy(other.gameObject);
+                //Timer.secondsLeft += 10;
+            }
+            else if (cooked == true)
+            {
+                wrong.SetActive(false);
+                potion.SetActive(true);
+                liquid.SetActive(false);
+            }
+            else
+            {
+                explode.Play();
+                wrong.SetActive(true);
+                liquid.SetActive(false);
+                explosion.Play();
+            }
         }
     }
 
