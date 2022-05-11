@@ -9,6 +9,8 @@ public class LightSwitch : MonoBehaviour
     public LayerMask lightingLayer;
     private float raycastDist = 30;
     private Light PLight;
+    AudioSource _audioSource;
+    public AudioClip torchSound;
 
     //private GameObject GameObjectHit = null;
     //private Transform hoverObject = null;
@@ -16,6 +18,11 @@ public class LightSwitch : MonoBehaviour
     //public GameObject Light;
     bool triggerState = false;
 
+
+    void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }    
     // Update is called once per frame
     void Update()
     {
@@ -35,10 +42,12 @@ public class LightSwitch : MonoBehaviour
                 if(PLight.intensity==8)
                 {
                     PLight.intensity=0;
+                    _audioSource.PlayOneShot(torchSound);
                 }
                 else if (PLight.intensity==0)
                 {
                     PLight.intensity=8;
+                    _audioSource.PlayOneShot(torchSound);
                 }
 
 
