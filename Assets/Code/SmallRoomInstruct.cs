@@ -14,7 +14,7 @@ public class SmallRoomInstruct : MonoBehaviour
         }
 
     IEnumerator UIlifetime(){
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(6f);
         puzzleUI.SetActive(false);
 
         }

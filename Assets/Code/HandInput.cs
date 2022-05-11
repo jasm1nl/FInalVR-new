@@ -20,7 +20,7 @@ public class HandInput : MonoBehaviour
 
         if (trigger)
         {
-            outText.text = "trigger";
+            outText.text = "";
         }
         else if (grip)
         {
@@ -39,7 +39,7 @@ public class HandInput : MonoBehaviour
             outText.text = "menu Button";
         }
         else
-            outText.text = "none";
+            outText.text = "";
 
     }
 }
