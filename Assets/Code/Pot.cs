@@ -5,10 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Pot : MonoBehaviour
 {
-    // string currentRecipeString = "";
-    // string recipe = "mushroom" + "eyeball" + "boot";
 
-    // ^you can change the recipe here
     bool cooked = false;
 
     public GameObject potion;
@@ -104,20 +101,13 @@ public class Pot : MonoBehaviour
             }
             else if (other.gameObject.CompareTag("berries") && item7 == true)
             {
-                liquid.SetActive(true);
                 wrong.SetActive(false);
-                cooked = true;
+                liquid.SetActive(false);
+                potion.SetActive(true);
+                exit.SetActive(true);
                 addingSound.Play();
                 Destroy(other.gameObject);
                 //Timer.secondsLeft += 10;
-            }
-            else if (cooked == true)
-            {
-                wrong.SetActive(false);
-                potion.SetActive(true);
-                exit.SetActive(true);
-
-                liquid.SetActive(false);
             }
             else
             {
@@ -127,15 +117,5 @@ public class Pot : MonoBehaviour
                 explosion.Play();
             }
         }
-    }
-
-    private void Update()
-    {
-
-    }
-
-    IEnumerator WaitTime()
-    {
-        yield return new WaitForSeconds(1f);
     }
 }
