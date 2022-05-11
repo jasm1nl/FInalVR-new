@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     public XRNode handRole = XRNode.RightHand;
     Rigidbody _rigidbody;
     Transform camTrans;
+    public GameObject walksound;
     void Start()
     {
         camTrans = Camera.main.transform;
@@ -24,6 +25,11 @@ public class PlayerMove : MonoBehaviour
         moveDir.y = _rigidbody.velocity.y;
         _rigidbody.velocity = moveDir;
 
-       
+        if (direction.y != 0 || direction.x != 0)
+        {
+            walksound.SetActive(true);
+        } else {
+            walksound.SetActive(false);
+        }
     }
 }
