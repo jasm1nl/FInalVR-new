@@ -12,6 +12,7 @@ public class Pot : MonoBehaviour
     bool cooked = false;
 
     public GameObject potion;
+    public GameObject exit;
     public GameObject liquid;
     public GameObject wrong;
     AudioSource addingSound;
@@ -114,6 +115,8 @@ public class Pot : MonoBehaviour
             {
                 wrong.SetActive(false);
                 potion.SetActive(true);
+                exit.SetActive(true);
+
                 liquid.SetActive(false);
             }
             else

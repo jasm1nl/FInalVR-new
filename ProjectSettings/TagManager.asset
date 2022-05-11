@@ -20,6 +20,7 @@ TagManager:
   - hammer
   - berries
   - Light
+  - Potion
   layers:
   - Default
   - TransparentFX
