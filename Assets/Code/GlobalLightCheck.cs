@@ -7,6 +7,7 @@ public class GlobalLightCheck : MonoBehaviour
     
     public GameObject light1, light2, light3, light4, light5, light6, light7;
     public GameObject Smalldoor;
+    public GameObject unlockUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,18 @@ public class GlobalLightCheck : MonoBehaviour
         {
             //remove the door from small room 
             Smalldoor.gameObject.SetActive(false);
+            unlockUI.gameObject.SetActive(true);
+            StartCoroutine(UIlifetime());
+
         }
+
     }
+
+    IEnumerator UIlifetime(){
+        yield return new WaitForSeconds(6f);
+        unlockUI.SetActive(false);
+
+        }
+
+
 }
